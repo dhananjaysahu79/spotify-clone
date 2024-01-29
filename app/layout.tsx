@@ -5,6 +5,7 @@ import SupabaseProvider from '@/providers/SupabaseProvider'
 import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
 import ToasterProvider from '@/providers/ToaterProvider'
+import UploadModal from '@/components/UploadModal'
 
 const font = Figtree({ subsets: ['latin'] })
 
