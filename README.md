@@ -1,2 +1,2 @@
-Completed till adding authentication (2:31:00)
+Completed till adding authentication (2:52:00)
 Todo: make OTP field
