@@ -9,10 +9,12 @@ import toast from "react-hot-toast";
 import uniqid from 'uniqid';
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useUser } from "@/hooks/useUser";
+import { useRouter } from "next/navigation";
 
 const UploadModal = () => {
     const uploadModal = useUploadModal();
     const supabaseClient = useSupabaseClient();
+    const router = useRouter();
     const { user } = useUser();
     const [isLoading, setIsLoading] = useState(false);
     const {
@@ -104,8 +106,11 @@ const UploadModal = () => {
                 return;
             }
 
-            toast.success("Song uploaded")
+            router.refresh()
             setIsLoading(false);
+            toast.success("Song uploaded")
+            reset()
+            uploadModal.onClose()
         }
         catch (error){
             setIsLoading(false);

@@ -1,2 +1,2 @@
-Completed till adding authentication (2:52:00)
+Completed till fetching songs data (3:10:00)
 Todo: make OTP field
