@@ -7,6 +7,7 @@ import { Song } from "@/types";
 import useUploadModal from "@/hooks/useUploadModal";
 import { useUser } from "@/hooks/useUser";
 import useAuthModal from "@/hooks/useAuthModal";
+import MediaItem from "./MediaItem";
 // import useSubscribeModal from "@/hooks/useSubscribeModal";
 // import useOnPlay from "@/hooks/useOnPlay";
 
@@ -60,7 +61,7 @@ const Library: React.FC<LibraryProps> = ({
       </div>
       <div className="flex flex-col gap-y-2 mt-4 px-3">
         {songs.map((item) => (
-          <p>{item.title}</p>
+          <MediaItem key={item.id} song={item} onClick={() => null} />
         ))}
       </div>
     </div>
