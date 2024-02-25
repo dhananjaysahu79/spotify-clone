@@ -18,7 +18,6 @@ const getSongsByTitle = async (title: string): Promise<Song[]> =>  {
     if(error){
         toast.error("Something went wrong!")
     }
-
     return (data as any) || [];
 }
 
