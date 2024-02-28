@@ -7,7 +7,7 @@ import PlayButton from "./PlayButton";
 
 interface SongItemProps {
     song: Song;
-    onClick: () => void;
+    onClick: (id: string) => void;
 }
 
 const SongItem: React.FC<SongItemProps> = ({
@@ -18,7 +18,7 @@ const SongItem: React.FC<SongItemProps> = ({
     console.log(imageUrl)
     if(!imageUrl) return (<div>Failed to load image</div>)
     return (
-        <div onClick={onClick}
+        <div onClick={() => onClick(song.id)}
             className="
             relative
             group
