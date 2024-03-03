@@ -17,12 +17,10 @@ const MediaItem: React.FC<MediaItemProps> = ({
 }) => {
   const player = usePlayer();
   const imageUrl = useLoadImage(song);
-
   const handleClick = () => {
     if (onClick) {
       return onClick(song.id);
     }
-  
     return player.setId(song.id);
   };
 
